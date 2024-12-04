@@ -19,14 +19,9 @@ public class Day4 {
 		StringTokenizer st = new StringTokenizer(content, "\n\r");
 		String firstLine = st.nextToken();
 		char grid[][] = new char[st.countTokens() + 1][firstLine.length()];
-		for (int i = 0; i < grid[0].length; i++) {
-			grid[0][i] = firstLine.charAt(i);
-		}
+		grid[0] = firstLine.toCharArray();
 		for (int i = 1; i < grid.length; i++) {
-			String line = st.nextToken();
-			for (int j = 0; j < grid[i].length; j++) {
-				grid[i][j] = line.charAt(j);
-			}
+			grid[i] = st.nextToken().toCharArray();
 		}
 		return grid;
 	}
