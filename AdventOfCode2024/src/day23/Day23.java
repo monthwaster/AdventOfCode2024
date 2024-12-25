@@ -61,7 +61,6 @@ public class Day23 {
 							if (!alreadyFound.contains(nw)) {
 								alreadyFound.add(nw);
 								total++;
-								System.out.println(" found " + key + " " + peer1 + " " + peers.get(j));
 							}
 						}
 					}
@@ -97,7 +96,7 @@ public class Day23 {
 		}
 
 		ArrayList<String> lanParty = null;
-		;
+		
 		for (Iterator<String> it = connections.keySet().iterator(); it.hasNext();) {
 			String key = it.next();
 			ArrayList<String> peers = connections.get(key);
